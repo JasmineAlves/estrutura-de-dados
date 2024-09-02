@@ -15,6 +15,7 @@ int instring(char string[], char c);*/
 
 #include <stdio.h>
 
+//Funcao 1.1 - Impressão
 void printvint(int a[], int n) {
     int i;
     for(i = 0; i<n; i++){
@@ -23,6 +24,7 @@ void printvint(int a[], int n) {
     printf("\n");
 }
 
+//Funcao 1.2 - Comparação
 int cmpvint(int a1[], int a2[], int n){ 
     int i;
     for(i = 0; i <n; i++){
@@ -33,6 +35,7 @@ int cmpvint(int a1[], int a2[], int n){
     return 1;
 }
 
+//Funcão 1.3 - Verificação de caractere
 int instring(char string[], char c){    
     int i;
     for(i = 0; string[i] != '\0'; i++){
@@ -50,14 +53,17 @@ int main(void){
     int array2[7] = {1, 2, 3, 4, 5, 6, 7};
     char s[] = "teste";
 
+    //Teste 1.1
     printvint(teste, 5);
 
+    //Teste 1.2
     if (cmpvint(array1, array2, 3) == 0){
         puts("As arrays sao DIFERENTES!");
     } else {
         puts("As arrays sao IGUAIS!");
     }
 
+    //Teste 1.3
     if (instring(s, 'e') == 1){
         puts("O caractere EXISTE na string!");
     } else {
